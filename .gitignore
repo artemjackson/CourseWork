@@ -2,3 +2,6 @@
 *.blg
 *.log
 *.pdf
+*.backup
+*.dvi
+*.toc
