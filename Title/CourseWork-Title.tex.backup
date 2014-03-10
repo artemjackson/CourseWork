@@ -1,0 +1,69 @@
+%\documentclass[a4paper,12pt]{report}	% Размер бумаги устанавливаем А4, шрифт 12пунктов
+%\usepackage[T2A]{fontenc}
+%\usepackage[utf8]{inputenc}	% Включаем свою кодировку: koi8-r или utf8 в UNIX, cp1251 в Windows
+%\usepackage[english,russian]{babel}	% Используем русский и английский языки с переносами
+%\usepackage{amssymb,amsfonts,amsmath,mathtext,cite,enumerate,float}	% Подключаем нужные пакеты расширений
+%\usepackage[dvips]{graphicx}	% Хотим вставлять в диплом рисунки?
+%\graphicspath{{images/}}	% Путь к рисункам
+
+%\makeatletter
+%\renewcommand{\@biblabel}[1]{#1.}	% Заменяем библиографию с квадратных скобок на точку:
+%\makeatother
+
+%\usepackage{geometry} 	% Меняем поля страницы:
+%\geometry{left=2cm}	% левое поле
+%\geometry{right=1.5cm}	% правое поле
+%\geometry{top=1cm}	% верхнее поле
+%\geometry{bottom=2cm}	% нижнее поле
+
+%\begin{document}
+
+\begin{titlepage}
+\newpage
+
+\begin{center}
+ФЕДЕРАЛЬНОЕ АГЕНТСТВО ПО ОБРАЗОВАНИЮ РФ \\
+\vspace{1cm}
+Н-СКИЙ АРБУЗО-ЛИТЕЙНЫЙ ИНСТИТУТ \\*
+(ГОСУДАРСТВЕННЫЙ УНИВЕРСИТЕТ) \\*
+\hrulefill
+\end{center}
+ 
+%\flushright{КАФЕДРА \No ХХХ}
+
+\vspace{8em}
+
+\begin{center}
+\Large Пояснительная записка \\ к дипломному проекту на тему:
+\end{center}
+
+\vspace{2.5em}
+ 
+\begin{center}
+\textsc{\textbf{исследование торсионных наногенераторов \linebreak стволовых клеток для борьбы с терроризмом}}
+\end{center}
+
+\vspace{6em}
+ 
+\begin{flushleft}
+Студент--дипломник \hrulefill Пупкин А.А. \\
+\vspace{1.5em}
+Научный руководитель \\
+доцент \hrulefill Иванов Б.Б.\\
+\vspace{1.5em}
+Рецензент \\
+к.ф.-м.н., в.н.с. АБВГ \hrulefill Петров В.В.\\
+\vspace{1.5em}
+%Зав. кафедрой \No ХХХ \\
+д.ф-м.н, профессор \hrulefill Сидоров Г.Г.
+\end{flushleft}
+ 
+\vspace{\fill}
+
+\begin{center}
+Н-ск 2000
+\end{center}
+
+\end{titlepage}
+
+%\end{document}
