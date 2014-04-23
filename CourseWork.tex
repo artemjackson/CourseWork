@@ -1,34 +1,30 @@
-\documentclass[12pt, oneside]{report} 
-\usepackage[xetex, a4paper, left=2cm, right=1.5cm, top=1cm,bottom=2cm]{geometry}%геаметрыя аркуша паперы
-\usepackage[cm-default]{fontspec}
-\usepackage{xunicode}
-\usepackage{xltxtra}
-
-\usepackage{polyglossia}% гэта замест бабеля
-\setdefaultlanguage[spelling=modern]{russian}
-\setotherlanguage{english} 
-\defaultfontfeatures{Scale=MatchLowercase,Ligatures=TeX}  %% устанавливает поведение шрифтов по умолчанию  
-\newfontfamily\cyrillicfont{Linux Libertine} % тут будуць іншыя шрыфты, я як раз сёння планую з гэтым паразбірацца
-\setromanfont[Mapping=tex-text]{Linux Libertine}
-\setsansfont[Mapping=tex-text]{Linux Biolinum}
-\setmonofont{DejaVu Sans Mono}
-
-%\usepackage{amssymb,amsfonts,amsmath,mathtext,cite,enumerate,float}	% Подключаем нужные пакеты расширений
-%\usepackage[dvips]{graphicx}	% Хотим вставлять в диплом рисунки?
+\documentclass[a4paper,14pt]{report}	% Размер бумагиs устанавливаем А4, шрифт 12пунктов
+\usepackage[T2A]{fontenc}	% Поддержка русских букв
+\usepackage[utf8]{inputenc}	% Включаем свою кодировку: koi8-r или utf8 в UNIX, cp1251 в Windows
+\usepackage[english,russian]{babel}	% Используем русский и английский языки с переносами
+\usepackage{amssymb,amsfonts,amsmath,mathtext,cite,enumerate,float}	% Подключаем нужные пакеты расширений
+\usepackage[dvips]{graphicx}	% Хотим вставлять в диплом рисунки?
 \graphicspath{{images/}}	% Путь к рисункам
-
 
 \usepackage{enumitem}	
 \setlist{nolistsep}	% отступы между элементами перечесления
 
 
-\makeatletter
-\renewcommand{\@biblabel}[1]{#1.}	% Заменяем библиографию с квадратных скобок на точку:
-%\renewcommand{\baselinestretch}{1.65}.	% Полуторный интервал в тексте
-\makeatother
+ \makeatletter
+ \renewcommand{\@biblabel}[1]{#1.}	% Заменяем библиографию с квадратных скобок на точку:
+% \renewcommand{\baselinestretch}{1.65}.	% Полуторный интервал в тексте
+ \makeatother
+
+\usepackage{geometry} 	% Меняем поля страницы:
+\geometry{left=2cm}	% левое поле
+\geometry{right=1.5cm}	% правое поле
+\geometry{top=1cm}	% верхнее поле
+\geometry{bottom=2cm}	% нижнее поле
 
 \begin{document}
 \input{./Title/CourseWork-Title}	% Титульный лист
 \tableofcontents 	% Оглавление, которое генерируется автоматически
 \input{./Entry/CourseWork-Entry}
+\input{./Theory/Theory}
+\input{./Rigidbody/Rigidbody}
 \end{document}
