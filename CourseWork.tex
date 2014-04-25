@@ -1,30 +1,48 @@
-\documentclass[a4paper,14pt]{report}	% Размер бумагиs устанавливаем А4, шрифт 12пунктов
-\usepackage[T2A]{fontenc}	% Поддержка русских букв
-\usepackage[utf8]{inputenc}	% Включаем свою кодировку: koi8-r или utf8 в UNIX, cp1251 в Windows
-\usepackage[english,russian]{babel}	% Используем русский и английский языки с переносами
-\usepackage{amssymb,amsfonts,amsmath,mathtext,cite,enumerate,float}	% Подключаем нужные пакеты расширений
-\usepackage[dvips]{graphicx}	% Хотим вставлять в диплом рисунки?
-\graphicspath{{images/}}	% Путь к рисункам
+\documentclass[12pt]{report} 
+\usepackage[xetex, a4paper, left=2cm, right=2cm, top=2cm,bottom=2cm]{geometry}
+\usepackage[cm-default]{fontspec}
+\usepackage{xunicode}
+\usepackage{xltxtra}
 
+\usepackage{amssymb,amsfonts,amsmath}
+%\tolerance=1000
+%\emergencystretch=0.74cm 
+
+\usepackage{polyglossia}
+\setdefaultlanguage[spelling=modern]{russian}
+\setotherlanguage{english} 
+\defaultfontfeatures{Scale=MatchLowercase,Ligatures=TeX}  %% устанавливает поведение шрифтов по умолчанию  
+\newfontfamily\cyrillicfont{Linux Libertine} 
+\setromanfont[Mapping=tex-text]{Linux Libertine}
+\setsansfont[Mapping=tex-text]{Linux Biolinum}
+\setmonofont{DejaVu Sans Mono}
+
+%\documentclass[a4paper,14pt]{report}	% Размер бумагиs устанавливаем А4, шрифт 12пунктов
+%\usepackage[T2A]{fontenc}	% Поддержка русских букв
+%\usepackage[utf8]{inputenc}	% Включаем свою кодировку: koi8-r или utf8 в UNIX, cp1251 в Windows
+%\usepackage[english,russian]{babel}	% Используем русский и английский языки с переносами
+%\usepackage{amssymb,amsfonts,amsmath,mathtext,cite,enumerate,float}	% Подключаем нужные пакеты расширений
+%\usepackage[dvips]{graphicx}	% Хотим вставлять в диплом рисунки?
+%\graphicspath{{images/}}	% Путь к рисункам
+%
 \usepackage{enumitem}	
 \setlist{nolistsep}	% отступы между элементами перечесления
 
 
- \makeatletter
- \renewcommand{\@biblabel}[1]{#1.}	% Заменяем библиографию с квадратных скобок на точку:
+% \makeatletter
+% \renewcommand{\@biblabel}[1]{#1.}	% Заменяем библиографию с квадратных скобок на точку:
 % \renewcommand{\baselinestretch}{1.65}.	% Полуторный интервал в тексте
- \makeatother
+% \makeatother
 
-\usepackage{geometry} 	% Меняем поля страницы:
-\geometry{left=2cm}	% левое поле
-\geometry{right=1.5cm}	% правое поле
-\geometry{top=1cm}	% верхнее поле
-\geometry{bottom=2cm}	% нижнее поле
+%\usepackage{geometry} 	% Меняем поля страницы:
+%\geometry{left=2cm}	% левое поле
+%\geometry{right=1.5cm}	% правое поле
+%\geometry{top=1cm}	% верхнее поле
+%\geometry{bottom=2cm}	% нижнее поле
 
 \begin{document}
 \input{./Title/CourseWork-Title}	% Титульный лист
 \tableofcontents 	% Оглавление, которое генерируется автоматически
-\input{./Entry/CourseWork-Entry}
-\input{./Theory/Theory}
+\input{./Entry/CourseWork-Entry} % TODO переработать существенным образом введение
 \input{./Rigidbody/Rigidbody}
 \end{document}
