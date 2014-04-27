@@ -7,7 +7,7 @@
 для игрока. Для большинства игр основной интерес представляют передвижение
 различных тел в пространстве, а также ряд визуальных феноменов механического
 плана. Примерами таких игр являются: трилогия "Crysis", серия игр "FlatOut", "Grand Theft Auto" и другие.
-. Существуют игры из жанра головоломок (например, серия "The incrdible machines", "Auditorium", "Zuma" и т.д.)
+Существуют игры из жанра головоломок (например, серия "The incrdible machines", "Auditorium", "Zuma" и т.д.)
 ), которые моделируют не только механические явления, однако они составляют
 сравнительно малую часть всех игр.
 
@@ -118,36 +118,33 @@
 Матрицами вращения вокруг оси декартовой системы координат на угол $\alpha$ в трехмерном пространстве являются:
 \begin{itemize}
   \item Вращение вокруг оси $x$:
-  \\
-  $M_x$($\alpha$) = 
-  $\begin{pmatrix} 
-    1 & 0          & 0           \\
-    0 & \cos\alpha & -\sin\alpha \\
-    0 & \sin\alpha & \cos\alpha
-  \end{pmatrix}$,
+  \begin{equation}
+    M_x(\alpha) = \begin{pmatrix} 
+		  1 & 0          & 0           \\
+		  0 & \cos\alpha & -\sin\alpha \\
+		  0 & \sin\alpha & \cos\alpha
+		  \end{pmatrix},
+  \end{equation}
   
   \item Вращение вокруг оси $y$:
-  \\
-  $M_y$($\alpha$) = 
-  $\begin{pmatrix} 
-    \cos\alpha  & 0 & \sin\alpha \\
-     0          & 1 & 0           \\
-    -\sin\alpha & 0 & \cos\alpha
-  \end{pmatrix}$,
-  
+  \begin{equation}  
+    M_y(\alpha) = \begin{pmatrix} 
+		  \cos\alpha  & 0 & \sin\alpha \\
+		  0          & 1 & 0           \\
+		 -\sin\alpha & 0 & \cos\alpha
+		  \end{pmatrix},
+  \end{equation}
   \item Вращение вокруг оси $z$:
-  \\
-  $M_z$($\alpha$) =
-  $\begin{pmatrix} 
-    \cos\alpha & -\sin\alpha & 0 \\
-    \sin\alpha & \cos\alpha  & 0 \\
-    0          & 0           & 1
-  \end{pmatrix}$.
+  \begin{equation}
+    M_z(\alpha) = \begin{pmatrix} 
+		  \cos\alpha & -\sin\alpha & 0 \\
+		  \sin\alpha & \cos\alpha  & 0 \\
+		  0          & 0           & 1
+		  \end{pmatrix}.
+  \end{equation}
 \end{itemize}
-
 Во всех примерах приведены матрица поворота от результирующей системы координат к исходной.
   
-
 \subsubsection{Кватернион}
 % \/  ...попытался
 %TODO описать кватернион и его связь с поворотом и угловой скоростью
