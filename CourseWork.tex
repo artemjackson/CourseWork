@@ -1,0 +1,33 @@
+\documentclass[12pt]{report} 
+\usepackage[xetex, a4paper, left = 2cm, right = 2cm, top = 2cm, bottom = 2cm]{geometry}		%	Выставляем поля
+
+\usepackage[xetex]{graphicx}	%	Подключаем графику
+\usepackage{epstopdf}		%	Поддержка графики .eps
+\usepackage{mathtools}		% 	Подключаем математические символы
+
+\usepackage[cm-default]{fontspec}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+
+\usepackage{amssymb,amsfonts,amsmath}
+%\tolerance=1000
+%\emergencystretch=0.74cm 
+
+\usepackage{polyglossia}
+\setdefaultlanguage[spelling = modern]{russian}
+\setotherlanguage{english} 
+\defaultfontfeatures{Scale = MatchLowercase,Ligatures=TeX}  %% устанавливает поведение шрифтов по умолчанию  
+\newfontfamily\cyrillicfont{Linux Libertine} 
+\setromanfont[Mapping = tex-text]{Linux Libertine}
+\setsansfont[Mapping = tex-text]{Linux Biolinum}
+\setmonofont{DejaVu Sans Mono}
+
+\usepackage{enumitem}	
+\setlist{nolistsep}	% отступы между элементами перечесления
+
+\begin{document}
+\input{./Title/Title}	% Титульный лист
+\tableofcontents 	% Оглавление, которое генерируется автоматически
+\input{./Entry/Entry} 
+\input{./Rigidbody/Rigidbody}
+\end{document}
