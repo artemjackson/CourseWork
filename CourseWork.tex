@@ -1,5 +1,4 @@
-\documentclass[12pt]{report} 
-\usepackage[xetex, a4paper, left = 2cm, right = 2cm, top = 2cm, bottom = 2cm]{geometry}		%	Выставляем поля
+\documentclass{thesisbyxetex}
 
 \usepackage[xetex]{graphicx}	%	Подключаем графику
 \usepackage{epstopdf}		%	Поддержка графики .eps
@@ -10,25 +9,42 @@
 \usepackage{xltxtra}
 
 \usepackage{amssymb,amsfonts,amsmath}
-%\tolerance=1000
-%\emergencystretch=0.74cm 
+
+%для борьбы с переполнениями за счет разреженных слов в абзаце
+\emergencystretch=25pt
 
 \usepackage{polyglossia}
 \setdefaultlanguage[spelling = modern]{russian}
 \setotherlanguage{english} 
 \defaultfontfeatures{Scale = MatchLowercase,Ligatures=TeX}  %% устанавливает поведение шрифтов по умолчанию  
-\newfontfamily\cyrillicfont{Linux Libertine} 
-\setromanfont[Mapping = tex-text]{Linux Libertine}
-\setsansfont[Mapping = tex-text]{Linux Biolinum}
-\setmonofont{DejaVu Sans Mono}
+\newfontfamily\cyrillicfont{Nimbus Roman No9 L}
+\setmainfont[Mapping=tex-text]{Nimbus Roman No9 L}
+\setromanfont[Mapping=tex-text]{Nimbus Roman No9 L}
+\setsansfont[Mapping=tex-text]{Nimbus Sans L}
+\setmonofont{Nimbus Mono L}
 
-\usepackage{enumitem}	
-\setlist{nolistsep}	% отступы между элементами перечесления
+% нужно подумать
+%\usepackage{enumitem}	
+%\setlist{nolistsep}	% отступы между элементами перечесления
+
+\usepackage[unicode, pdfborder={0 0 0 0}]{hyperref}
+
+\usepackage[backend=biber]{biblatex}
+\addbibresource{bibliography.bib}
 
 \begin{document}
+
+\hypersetup{
+pdftitle = {Курсовая работа},
+pdfauthor = {Степанищев Артём Эдуардович},
+pdfsubject = {курсовая},
+pdfkeywords = {физический движок, язык D, курсовая}
+}% End of hypersetup
+
 \input{./Title/Title}	% Титульный лист
 \tableofcontents 	% Оглавление, которое генерируется автоматически
 \input{./Entry/Entry} 
 \input{./Rigidbody/Rigidbody}
 \input{./Geometry/Geometry}
+\printbibliography
 \end{document}
