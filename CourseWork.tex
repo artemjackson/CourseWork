@@ -17,15 +17,17 @@
 \setdefaultlanguage[spelling = modern]{russian}
 \setotherlanguage{english} 
 \defaultfontfeatures{Scale = MatchLowercase,Ligatures=TeX}  %% устанавливает поведение шрифтов по умолчанию  
+
 \newfontfamily\cyrillicfont{Nimbus Roman No9 L}
 \setmainfont[Mapping=tex-text]{Nimbus Roman No9 L}
 \setromanfont[Mapping=tex-text]{Nimbus Roman No9 L}
 \setsansfont[Mapping=tex-text]{Nimbus Sans L}
 \setmonofont{Nimbus Mono L}
 
+
 % нужно подумать
-%\usepackage{enumitem}	
-%\setlist{nolistsep}	% отступы между элементами перечесления
+\usepackage{enumitem}	
+\setlist{nolistsep}	% отступы между элементами перечесления
 
 \usepackage[unicode, pdfborder={0 0 0 0}]{hyperref}
 
@@ -52,6 +54,7 @@ pdfkeywords = {физический движок, язык D, курсовая}
 \input{./Entry/Entry} 
 \input{./Rigidbody/Rigidbody}
 \input{./Geometry/Geometry}
+
 
 
 \printbibliography
