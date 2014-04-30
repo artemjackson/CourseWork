@@ -1,7 +1,7 @@
 \documentclass{thesisbyxetex}
 
 \usepackage[xetex]{graphicx}	%	Подключаем графику
-\usepackage{epstopdf}		%	Поддержка графики .eps
+%\usepackage{epstopdf}		%	Поддержка графики .eps
 \usepackage{mathtools}		% 	Подключаем математические символы
 
 \usepackage[cm-default]{fontspec}
@@ -29,7 +29,13 @@
 
 \usepackage[unicode, pdfborder={0 0 0 0}]{hyperref}
 
-\usepackage[backend=biber]{biblatex}
+\usepackage[%parentracker=true,
+  backend=biber,
+  hyperref=auto,
+  language=auto,
+  babel=other,
+  style=gost-numeric,
+]{biblatex}
 \addbibresource{bibliography.bib}
 
 \begin{document}
@@ -47,5 +53,8 @@ pdfkeywords = {физический движок, язык D, курсовая}
 \input{./Rigidbody/Rigidbody}
 \input{./Geometry/Geometry}
 
+
 \printbibliography
+\addcontentsline{toc}{chapter}{Литература}
+
 \end{document}
