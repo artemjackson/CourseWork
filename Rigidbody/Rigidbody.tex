@@ -132,28 +132,31 @@
 \begin{itemize}
   \item Вращение вокруг оси $x$:
   \begin{equation}
-    M_x(\alpha) = \begin{pmatrix} 
-		  1 & 0          & 0           \\
-		  0 & \cos\alpha & -\sin\alpha \\
-		  0 & \sin\alpha & \cos\alpha
-		  \end{pmatrix},
+    \mathrm{M}_x(\alpha) = 
+    \begin{pmatrix} 
+      1 & 0          & 0 \\
+      0 & \cos\alpha & -\sin\alpha \\
+      0 & \sin\alpha & \cos\alpha
+    \end{pmatrix},
   \end{equation}
   
   \item Вращение вокруг оси $y$:
   \begin{equation}  
-    M_y(\alpha) = \begin{pmatrix} 
-		  \cos\alpha  & 0 & \sin\alpha \\
-		  0          & 1 & 0           \\
-		 -\sin\alpha & 0 & \cos\alpha
-		  \end{pmatrix},
+    \mathrm{M}_y(\alpha) = 
+    \begin{pmatrix} 
+      \cos\alpha  & 0 & \sin\alpha \\
+      0           & 1 & 0           \\
+      -\sin\alpha & 0 & \cos\alpha
+    \end{pmatrix},
   \end{equation}
   \item Вращение вокруг оси $z$:
   \begin{equation}
-    M_z(\alpha) = \begin{pmatrix} 
-		  \cos\alpha & -\sin\alpha & 0 \\
-		  \sin\alpha & \cos\alpha  & 0 \\
-		  0          & 0           & 1
-		  \end{pmatrix}.
+    \mathrm{M}_z(\alpha) = 
+    \begin{pmatrix} 
+      \cos\alpha & -\sin\alpha & 0 \\
+      \sin\alpha & \cos\alpha  & 0 \\
+      0          & 0           & 1
+    \end{pmatrix}.
   \end{equation}
 \end{itemize}
 Во всех примерах приведены матрица поворота от результирующей системы координат к исходной.
